@@ -1,8 +1,14 @@
 # dhcp2phpipam
 A Python interface to manage IP addresses in phpIPAM through REST API, with integration to ISC-DHCP
 
+phpIPAM is an open-source web IP address management application. Its goal is to provide light and simple IP address management application.
 
-#Usage
+Site: [phpIPAM homepage](http://phpipam.net)
+
+![phpIPAM logo](http://phpipam.net/wp-content/uploads/2014/12/phpipam_logo_small.png)
+
+
+# Usage
 ## Add IP Adreess
 ```bash
 	./dhcp2phpipm.py add ClientIP ClientDHCID ClientName RouterIP
@@ -11,7 +17,7 @@ Where:
 * ClientIP : Host IP address
 * ClientDHCID : Host MAC Address
 * ClientName : Hostname 
-* RouterIP : `RouterIP` is required to determine the subnet in which the `ClientIP` should be added. `ClientIP` is added on the same subnet where `RouterIP` is located. It can be the IP of the router of the subnet or some other reference IP in that subnet
+* RouterIP : `RouterIP` is required to determine the subnet in which the `ClientIP` should be added. `ClientIP` is added on the same subnet where `RouterIP` is located. It can be the IP of the gateway of the subnet or some other reference IP in that subnet
 
 ## Update IP Adreess
 ```bash
@@ -44,8 +50,9 @@ or
 	api_token = 'your_api_key'
 ```
 5. Set execute permission on `dhcp2phpipm.py`
+```bash
 	chmod +x `/etc/dhcp/dhcpd-hooks.d/dhcp2phpipm.py`
-
+```
 6. Download and copy `usr.sbin.dhcpd` in: `/etc/apparmor.d/local/` and restart apparmor service
 
 7. Download and copy `dhcpd-event.conf` in `/etc/dhcp/dhcpd.conf.d/`
