@@ -1,6 +1,14 @@
-  /etc/dhcp/dhcpd-hooks.d/dhcp2phpipm.py ixr,
+
+  /etc/dhcp/dhcpd-hooks.d/dhcp2phpipam.py ixr,
+  /usr/local/lib/python2.7/** ixr,
+  /usr/local/lib/python2.7/** r,
   /etc/python2.7/sitecustomize.py r,
   /usr/lib/python2.7/** r,
   /usr/lib/python2.7/lib-dynload/** m,
-  /usr/local/lib/python2.7/** ixr,
-  /usr/local/lib/python2.7/** r,
+  /usr/lib/python2.7/dist-packages/** m,
+
+  /bin/dash ixr,
+  /sbin/ldconfig ixr,
+  /sbin/ldconfig.real ixr,
+
+  owner /tmp/**         rwkl,
