@@ -29,7 +29,7 @@ Where:
 ```
 
 
-#Installation with ISC-DHCP in Ubuntu
+# Installation with ISC-DHCP in Ubuntu
 
 1. Install packages
 ```bash
@@ -41,7 +41,7 @@ or
 ```
 2. Create directory `/etc/dhcp/dhcpd-hooks.d/` 
 
-3. Download and copy `dhcp2phpipm.py` in `/etc/dhcp/dhcpd-hooks.d/`
+3. Download and copy [`dhcp2phpipm.py`](https://raw.githubusercontent.com/pvrmza/dhcp2phpipam/master/dhcp2phpipam.py) in `/etc/dhcp/dhcpd-hooks.d/`
 
 4. Edit `dhcp2phpipm.py` and set phpIPAM url, api name and api token
 ```python
@@ -51,17 +51,21 @@ or
 ```
 5. Set execute permission on `dhcp2phpipm.py`
 ```bash
-	chmod +x `/etc/dhcp/dhcpd-hooks.d/dhcp2phpipm.py`
+	chmod +x /etc/dhcp/dhcpd-hooks.d/dhcp2phpipm.py
 ```
-6. Download and copy `usr.sbin.dhcpd` in: `/etc/apparmor.d/local/` and restart apparmor service
+6. Download and copy [`usr.sbin.dhcpd`](https://raw.githubusercontent.com/pvrmza/dhcp2phpipam/master/usr.sbin.dhcpd) in: `/etc/apparmor.d/local/` and restart apparmor service
 
-7. Download and copy `dhcpd-event.conf` in `/etc/dhcp/dhcpd.conf.d/`
+7. Create directory `/etc/dhcp/dhcpd.conf.d/`
 
-6. Edit `/etc/dhcp/dhcpd.conf` and include `dhcpd-event.conf` with trigers update
+8. Download and copy [`dhcpd-event.conf`](https://raw.githubusercontent.com/pvrmza/dhcp2phpipam/master/dhcpd-event.conf) in `/etc/dhcp/dhcpd.conf.d/`
+
+9. Edit `/etc/dhcp/dhcpd.conf` and include `dhcpd-event.conf` with trigers update
 ```bash
 	include "/etc/dhcp/dhcpd.conf.d/dhcpd-event.conf";
 ```
-7. Restart DHCP Server
+10. Restart DHCP Server
+
+11. Enjoy
 
 
 # Other API clients
