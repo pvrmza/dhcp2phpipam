@@ -51,17 +51,12 @@ or
 ```
 5. Set execute permission on `dhcp2phpipam.py`
 ```bash
-<<<<<<< HEAD
 	chmod +x `/etc/dhcp/dhcpd-hooks.d/dhcp2phpipam.py`
 ```
-6. Download and copy `usr.sbin.dhcpd` in: `/etc/apparmor.d/local/` and restart apparmor service
-=======
-	chmod +x /etc/dhcp/dhcpd-hooks.d/dhcp2phpipam.py
-```
+
 6. Download and copy [`usr.sbin.dhcpd`](https://raw.githubusercontent.com/pvrmza/dhcp2phpipam/master/usr.sbin.dhcpd) in: `/etc/apparmor.d/local/` and restart apparmor service
 
 7. Create directory `/etc/dhcp/dhcpd.conf.d/`
->>>>>>> bfd13d3efabea57320adedf6d982bb47fa0e2a1b
 
 8. Download and copy [`dhcpd-event.conf`](https://raw.githubusercontent.com/pvrmza/dhcp2phpipam/master/dhcpd-event.conf) in `/etc/dhcp/dhcpd.conf.d/`
 
