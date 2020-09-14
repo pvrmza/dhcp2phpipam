@@ -88,6 +88,7 @@ def update_address(base_url,api_token,ip,mac,hostname="",silence=1):
             exit(2)
     else:
         if silence == 0: print("Host found... updating")
+        now=str(datetime.datetime.now())
         # update
         DATA={"hostname":hostname, "mac":mac, "lastSeen":now }
         res = requests.patch(base_url + "addresses/" + hostIpId + "/", headers={'token': api_token}, json=DATA)
